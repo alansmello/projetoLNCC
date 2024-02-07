@@ -1,3 +1,21 @@
+# Projeto de Análise de Dados em Saúde Coletiva - LNCC
+
+Bem-vindo ao repositório do projeto de página web destinada à publicação e análise de dados referentes ao projeto de iniciação científica conduzido no Laboratório Nacional de Computação Científica (LNCC). Este projeto, intitulado "Estudo e Implementação de Sistema de Banco de Dados para Análise em Saúde Coletiva", conta com a participação de Alan de Souza Mello e Ana Paula de Oliveira Souza como bolsistas, respectivamente, sob os programas PIBIT e PIBIC. O projeto é orientado por José Karam Filho e coorientado por Paulo Cabral Filho.
+
+## Objetivo
+Este projeto tem como objetivo principal a análise de dados relacionados às internações por câncer no Brasil desde 2011, utilizando dados do DataSus. Inicialmente, foi realizado com sucesso o processo de implementação de um banco de dados MySQL contendo mais de 5 milhões de registros de internações por câncer no sistema SUS, bem como a automatização desse processo através de scripts shell.
+
+## Próximos Passos
+Com a base de dados consolidada, o próximo passo é realizar análises aprofundadas dos dados coletados. Para facilitar o acesso e disseminação dessas análises, será desenvolvido um site utilizando ReactJS integrado com NextJs para a camada de frontend.
+
+## Contribuição
+Este repositório serve como ponto central para o desenvolvimento do site de análise de dados em saúde coletiva. Sinta-se à vontade para colaborar, contribuir com ideias e sugestões, ou reportar problemas. O versionamento do código é realizado utilizando Git e hospedado no GitHub para colaboração e controle de versão.
+
+Junte-se a nós nessa jornada de análise de dados em saúde coletiva e contribua para avanços significativos em pesquisa e educação.
+
+Abaixo segue a documentação para rodar o projeto.
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
