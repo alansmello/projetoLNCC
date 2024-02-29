@@ -24,6 +24,7 @@ import SchoolIcon from '@mui/icons-material/School';
 import MedicationIcon from '@mui/icons-material/Medication';
 import Link from 'next/link';
 import { useState } from 'react';
+import Typography from '@mui/material/Typography';
 
 
 
@@ -36,8 +37,9 @@ const categories = [
         icon: <LocalHospitalIcon />,
         active: true,
       },
-      { id: 'Cardiologia', icon: <FavoriteBorderIcon /> },
+     
       { id: 'Modelagem Computacional', icon: <ComputerIcon /> },
+       {/*{ id: 'Cardiologia', icon: <FavoriteBorderIcon /> },*/}
       /*{ id: 'Hosting', icon: <PublicIcon /> },
       { id: 'Functions', icon: <SettingsEthernetIcon /> },
       {
@@ -69,6 +71,7 @@ const item = {
 
 const itemCategory = {
   boxShadow: '0 -1px 0 rgb(255,255,255,0.1) inset',
+  fontWeight:'bold' ,
   py: 1.5,
   px: 3,
 };
@@ -87,26 +90,21 @@ export default function Navigator(props: DrawerProps) {
   return (
     <Drawer variant="permanent" {...other}>
       <List disablePadding>
-        <ListItem sx={{ ...item, ...itemCategory, fontSize: 22, color: '#fff' }}>
-        <img src="/images/lnccPrincipal.png" alt="LNCC Logo" width={500} height={500} />
+      <ListItemButton  selected={activeItem === 'Apresentacao'}  onClick={() => handleItemClick('Apresentacao')}>
+        <ListItem sx={{ ...item, ...itemCategory, fontSize: 18, color: '#fff', height:'100px' }}>
+        <Typography color="inherit" variant="h5" component="h1">
+                Cooperação Científica 
+              </Typography>
         </ListItem>
+        </ListItemButton>
        
-        <ListItem disablePadding sx={{ ...item, ...itemCategory}}>
-        <ListItemButton  selected={activeItem === 'Apresentacao'}  onClick={() => handleItemClick('Apresentacao')}>
-      
-          <ListItemIcon sx={{ minWidth: 'auto' }}>
-            <HomeIcon />
-          </ListItemIcon>
-          <ListItemText sx={{ ml: 1 }}>Apresentação</ListItemText>
-         
-          </ListItemButton>
-          </ListItem>
+        
      
     
         {categories.map(({ id, children }) => (
-          <Box key={id} sx={{ bgcolor: '#101F33' }}>
+          <Box key={id} sx={{ bgcolor: '#101F33'}}>
             <ListItem sx={{ py: 2, px: 3 }}>
-              <ListItemText   sx={{ color: '#fff' }}>{id}</ListItemText>
+              <ListItemText   sx={{ fontWeight: 'bold', color: '#ff0000', '& span': { fontWeight: 'bold' } }}>{id}</ListItemText>
             </ListItem>
             {children.map(({ id: childId, icon }) => (
               <ListItem disablePadding key={childId}>

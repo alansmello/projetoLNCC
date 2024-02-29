@@ -199,14 +199,7 @@ export default function Paperbase() {
           component="nav"
           sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
         >
-          {isSmUp ? null : (
-            <Navigator
-              PaperProps={{ style: { width: drawerWidth } }}
-              variant="temporary"
-              open={mobileOpen}
-              onClose={handleDrawerToggle}
-            />
-          )}
+        
           <Navigator
             PaperProps={{ style: { width: drawerWidth }, teste2 }}
             sx={{ display: { sm: 'block', xs: 'none' } }}
@@ -218,7 +211,7 @@ export default function Paperbase() {
           <Box component="main" sx={{ flex: 1, py: 6, px: 4, bgcolor: '#eaeff1' }}>
             {content === 'Apresentacao' && <Apresentacao/>}
             {content === 'Cancer' && <Cancer/>}
-            {content === 'Cardiologia' && <Cardiologia/>}
+        
             {content === 'Modelagem Computacional' && <ModelagemComputacional/>}
             {content === 'LEMAS/IMS' && <Ims/>}
             {content === 'LNCC' && <Lncc/>}

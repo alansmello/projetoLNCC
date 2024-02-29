@@ -77,38 +77,34 @@ export default function Header(props: HeaderProps) {
              
              <AppBar
         component="div"
-        color="primary"
         position="static"
         elevation={0}
-        sx={{ zIndex: 0 }}
+        sx={{ backgroundColor: '#101f33', zIndex: 9999 }}
       >
         <Toolbar>
-          <Grid container alignItems="center" justifyContent="space-between">
-            <Grid item>
-              <Typography color="inherit" variant="h5" component="h1">
-                Cooperação Científica 
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Grid container spacing={1} alignItems="center">
-                <Grid item>
-                  <Link href="http://www.lncc.br" target="_blank" rel="noopener noreferrer">
-                    <img src="/images/lnccPrincipal.png" alt="LNCC Logo" width={100} height={100} />
-                  </Link>
-                </Grid>
-                <Grid item>
-                  <Link href="https://www.faeterj-petropolis.edu.br/" target="_blank" rel="noopener noreferrer">
-                    <img src="/images/faeterj.png" alt="Faeterj Logo" width={100} height={100} />
-                  </Link>
-                </Grid>
-                <Grid item>
-                  <Link href="https://www.ims.uerj.br/" target="_blank" rel="noopener noreferrer">
-                    <img src="/images/ims.jpg" alt="OMS Logo" width={100} height={100} />
-                  </Link>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Grid>
+        <Grid container alignItems="center" justifyContent="space-between">
+  {/* Primeira imagem alinhada à esquerda */}
+  <Grid item>
+    <Link href="http://www.lncc.br" target="_blank" rel="noopener noreferrer">
+      <Image src="/images/lnccPrincipal.png" alt="LNCC Logo" width={300} height={300} />
+    </Link>
+  </Grid>
+  
+  {/* Segunda imagem alinhada ao centro */}
+  <Grid item>
+    <Link href="https://www.ims.uerj.br/" target="_blank" rel="noopener noreferrer">
+      <Image src="/images/ims.jpg" alt="OMS Logo" width={300} height={300} />
+    </Link>
+  </Grid>
+  
+  {/* Terceira imagem alinhada à direita */}
+  <Grid item>
+    <Link href="https://www.faeterj-petropolis.edu.br/" target="_blank" rel="noopener noreferrer">
+      <Image src="/images/faeterj3.png" alt="Faeterj Logo" width={100} height={100} />
+    </Link>
+  </Grid>
+</Grid>
+
         </Toolbar>
       </AppBar>
       <AppBar component="div" position="static" elevation={0} sx={{ zIndex: 0 }}>
