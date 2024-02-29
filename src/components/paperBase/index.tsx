@@ -6,8 +6,16 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import Navigator from '../navigator';
-import Content from '../content';
 import Header  from "../header";
+import Home from '@/pages';
+import Cardiologia from '@/pages/cardiologia';
+import { useState } from 'react';
+import Cancer from '@/pages/cancer';
+import ModelagemComputacional from '@/pages/modelagemComputacional';
+import Apresentacao from '@/pages/apresentacao';
+import Ims from '@/pages/ims';
+import Lncc from '@/pages/lncc';
+import Faeterj from '@/pages/faeterj';
 
 function Copyright() {
   return (
@@ -167,12 +175,21 @@ theme = {
 const drawerWidth = 256;
 
 export default function Paperbase() {
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [content, setContent] = useState('Apresentacao');
+
   const isSmUp = useMediaQuery(theme.breakpoints.up('sm'));
 
   const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
+   
+      setMobileOpen(true);
+     
   };
+
+  const teste2 = (teste: string) => {
+    setContent(teste)
+  };
+
 
   return (
     <ThemeProvider theme={theme}>
@@ -191,14 +208,21 @@ export default function Paperbase() {
             />
           )}
           <Navigator
-            PaperProps={{ style: { width: drawerWidth } }}
+            PaperProps={{ style: { width: drawerWidth }, teste2 }}
             sx={{ display: { sm: 'block', xs: 'none' } }}
+         
           />
         </Box>
         <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
           <Header onDrawerToggle={handleDrawerToggle} />
           <Box component="main" sx={{ flex: 1, py: 6, px: 4, bgcolor: '#eaeff1' }}>
-            <Content />
+            {content === 'Apresentacao' && <Apresentacao/>}
+            {content === 'Cancer' && <Cancer/>}
+            {content === 'Cardiologia' && <Cardiologia/>}
+            {content === 'Modelagem Computacional' && <ModelagemComputacional/>}
+            {content === 'LEMAS/IMS' && <Ims/>}
+            {content === 'LNCC' && <Lncc/>}
+            {content === 'FAETERJ' && <Faeterj/>}
           </Box>
           <Box component="footer" sx={{ p: 2, bgcolor: '#eaeff1' }}>
             <Copyright />

@@ -92,7 +92,7 @@ export default function Header(props: HeaderProps) {
             <Grid item>
               <Grid container spacing={1} alignItems="center">
                 <Grid item>
-                  <Link href="https://www.lncc.br/sic" target="_blank" rel="noopener noreferrer">
+                  <Link href="http://www.lncc.br" target="_blank" rel="noopener noreferrer">
                     <img src="/images/lnccPrincipal.png" alt="LNCC Logo" width={100} height={100} />
                   </Link>
                 </Grid>
@@ -102,8 +102,8 @@ export default function Header(props: HeaderProps) {
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="https://www.who.int/pt/about" target="_blank" rel="noopener noreferrer">
-                    <img src="/images/oms.jpg" alt="OMS Logo" width={100} height={100} />
+                  <Link href="https://www.ims.uerj.br/" target="_blank" rel="noopener noreferrer">
+                    <img src="/images/ims.jpg" alt="OMS Logo" width={100} height={100} />
                   </Link>
                 </Grid>
               </Grid>

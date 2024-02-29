@@ -10,7 +10,7 @@ import Paperbase from "@/components/paperBase";
 export default function Home() {
   return (
     <>
-    <Paperbase/>
+    <h1>Home</h1>
     </>
   );
 }

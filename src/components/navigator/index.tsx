@@ -22,6 +22,9 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ComputerIcon from '@mui/icons-material/Computer';
 import SchoolIcon from '@mui/icons-material/School';
 import MedicationIcon from '@mui/icons-material/Medication';
+import Link from 'next/link';
+import { useState } from 'react';
+
 
 
 const categories = [
@@ -45,11 +48,11 @@ const categories = [
     ],
   },
   {
-    id: 'Colaboradores',
+    id: 'Grupos de Pesquisas',
     children: [
-      { id: 'Uerj', icon: <SchoolIcon /> },
-      { id: 'UFRJ', icon: <SchoolIcon /> },
-      { id: 'INCA', icon: <MedicationIcon /> },
+      { id: 'LEMAS/IMS', icon: <MedicationIcon /> },
+      { id: 'LNCC', icon: <SchoolIcon /> },
+      { id: 'FAETERJ', icon: <SchoolIcon /> },
       
     ],
   },
@@ -58,9 +61,9 @@ const categories = [
 const item = {
   py: '2px',
   px: 3,
-  color: 'rgba(255, 255, 255, 0.7)',
+  color: 'white',
   '&:hover, &:focus': {
-    bgcolor: 'black',
+    bgcolor: 'rgba(255, 255, 255, 0.08)',
   },
 };
 
@@ -72,33 +75,47 @@ const itemCategory = {
 
 export default function Navigator(props: DrawerProps) {
   const { ...other } = props;
+  const [content, setContent] = useState('');
+  const [activeItem, setActiveItem] = useState('Apresentacao');
 
-
-
+  
+  const handleItemClick = (teste: string) => {
+    other.PaperProps.teste2(teste);
+    setActiveItem(teste);
+  };
+  
   return (
     <Drawer variant="permanent" {...other}>
       <List disablePadding>
-        <ListItem sx={{ ...item, ...itemCategory, fontSize: 22, color: '#fff', background:'black' }}>
+        <ListItem sx={{ ...item, ...itemCategory, fontSize: 22, color: '#fff' }}>
         <img src="/images/lnccPrincipal.png" alt="LNCC Logo" width={500} height={500} />
         </ListItem>
-        <ListItem sx={{ ...item, ...itemCategory }}>
-           {/* 
-          <ListItemIcon>
+       
+        <ListItem disablePadding sx={{ ...item, ...itemCategory}}>
+        <ListItemButton  selected={activeItem === 'Apresentacao'}  onClick={() => handleItemClick('Apresentacao')}>
+      
+          <ListItemIcon sx={{ minWidth: 'auto' }}>
             <HomeIcon />
           </ListItemIcon>
-        <ListItemText>Cooperação Científica</ListItemText>*/}
-        </ListItem>
+          <ListItemText sx={{ ml: 1 }}>Apresentação</ListItemText>
+         
+          </ListItemButton>
+          </ListItem>
+     
+    
         {categories.map(({ id, children }) => (
-          <Box key={id} sx={{ bgcolor: 'black' }}>
+          <Box key={id} sx={{ bgcolor: '#101F33' }}>
             <ListItem sx={{ py: 2, px: 3 }}>
-              <ListItemText  sx={{ color: '#fff' }}>{id}</ListItemText>
+              <ListItemText   sx={{ color: '#fff' }}>{id}</ListItemText>
             </ListItem>
-            {children.map(({ id: childId, icon, active }) => (
+            {children.map(({ id: childId, icon }) => (
               <ListItem disablePadding key={childId}>
-                <ListItemButton selected={active} sx={item}>
+              
+              <ListItemButton selected={activeItem === childId} sx={item} onClick={() => handleItemClick(childId)}>
                   <ListItemIcon>{icon}</ListItemIcon>
-                  <ListItemText>{childId}</ListItemText>
+                  <ListItemText >{childId}</ListItemText>
                 </ListItemButton>
+              
               </ListItem>
             ))}
             <Divider sx={{ mt: 2 }} />
