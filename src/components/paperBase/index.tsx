@@ -175,16 +175,11 @@ theme = {
 const drawerWidth = 256;
 
 export default function Paperbase() {
-  const [mobileOpen, setMobileOpen] = useState(false);
+ 
   const [content, setContent] = useState('Apresentacao');
 
-  const isSmUp = useMediaQuery(theme.breakpoints.up('sm'));
 
-  const handleDrawerToggle = () => {
-   
-      setMobileOpen(true);
-     
-  };
+
 
   const teste2 = (teste: string) => {
     setContent(teste)
@@ -207,7 +202,7 @@ export default function Paperbase() {
           />
         </Box>
         <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
-          <Header onDrawerToggle={handleDrawerToggle} />
+          <Header     />
           <Box component="main" sx={{ flex: 1, py: 6, px: 4, bgcolor: '#eaeff1' }}>
             {content === 'Apresentacao' && <Apresentacao/>}
             {content === 'Cancer' && <Cancer/>}

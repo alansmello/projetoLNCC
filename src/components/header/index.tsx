@@ -21,8 +21,8 @@ interface HeaderProps {
   onDrawerToggle: () => void;
 }
 
-export default function Header(props: HeaderProps) {
-  const { onDrawerToggle } = props;
+export default function Header() {
+ 
 
   return (
     <React.Fragment>
@@ -77,47 +77,38 @@ export default function Header(props: HeaderProps) {
              
              <AppBar
         component="div"
-        position="static"
-        elevation={0}
-        sx={{ backgroundColor: '#101f33', zIndex: 9999 }}
+        position="sticky"
+        elevation={10}
+        sx={{ backgroundColor: '#101f33', zIndex: 0 }}
+        
       >
         <Toolbar>
         <Grid container alignItems="center" justifyContent="space-between">
   {/* Primeira imagem alinhada à esquerda */}
   <Grid item>
     <Link href="http://www.lncc.br" target="_blank" rel="noopener noreferrer">
-      <Image src="/images/lnccPrincipal.png" alt="LNCC Logo" width={300} height={300} />
+      <Image src="/images/lnccPrincipal.png" alt="LNCC Logo" width={250} height={250} />
     </Link>
   </Grid>
   
   {/* Segunda imagem alinhada ao centro */}
   <Grid item>
     <Link href="https://www.ims.uerj.br/" target="_blank" rel="noopener noreferrer">
-      <Image src="/images/ims.jpg" alt="OMS Logo" width={300} height={300} />
+      <Image src="/images/ims4.png" alt="OMS Logo" width={300} height={300} />
     </Link>
   </Grid>
   
   {/* Terceira imagem alinhada à direita */}
   <Grid item>
     <Link href="https://www.faeterj-petropolis.edu.br/" target="_blank" rel="noopener noreferrer">
-      <Image src="/images/faeterj3.png" alt="Faeterj Logo" width={100} height={100} />
+      <Image src="/images/faeterj4.png" alt="Faeterj Logo" width={100} height={100} />
     </Link>
   </Grid>
 </Grid>
 
         </Toolbar>
       </AppBar>
-      <AppBar component="div" position="static" elevation={0} sx={{ zIndex: 0 }}>
-        <br></br>
-        {/*
-        <Tabs value={0} textColor="inherit">
-          <Tab label="Users" />
-          <Tab label="Sign-in method" />
-          <Tab label="Templates" />
-          <Tab label="Usage" />
-        </Tabs>
-        */}
-              </AppBar>
+      
     </React.Fragment>
   );
 }
