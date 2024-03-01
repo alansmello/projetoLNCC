@@ -33,7 +33,7 @@ const categories = [
     id: 'Linhas de Pesquisas',
     children: [
       {
-        id: 'Cancer',
+        id: 'Câncer',
         icon: <LocalHospitalIcon />,
         active: true,
       },

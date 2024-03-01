@@ -21,8 +21,8 @@ function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
+      <Link color="inherit" href="http://www.lncc.br">
+        LNCC
       </Link>{' '}
       {new Date().getFullYear()}.
     </Typography>
@@ -205,7 +205,7 @@ export default function Paperbase() {
           <Header     />
           <Box component="main" sx={{ flex: 1, py: 6, px: 4, bgcolor: '#eaeff1' }}>
             {content === 'Apresentacao' && <Apresentacao/>}
-            {content === 'Cancer' && <Cancer/>}
+            {content === 'Câncer' && <Cancer/>}
         
             {content === 'Modelagem Computacional' && <ModelagemComputacional/>}
             {content === 'LEMAS/IMS' && <Ims/>}

@@ -11,7 +11,7 @@ export default function Cancer() {
           minHeight: '85vh',
         }}>
        
-       <h1>Cancer</h1>
+       <h1>Câncer</h1>
       </div>
     );
 }
