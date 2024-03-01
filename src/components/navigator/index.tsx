@@ -25,7 +25,7 @@ import MedicationIcon from '@mui/icons-material/Medication';
 import Link from 'next/link';
 import { useState } from 'react';
 import Typography from '@mui/material/Typography';
-
+import { useRouter } from 'next/router';
 
 
 const categories = [
@@ -33,12 +33,15 @@ const categories = [
     id: 'Linhas de Pesquisas',
     children: [
       {
-        id: 'Câncer',
+        id: 'Câncer' ,
         icon: <LocalHospitalIcon />,
-        active: true,
+        route: 'cancer'
       },
-     
-      { id: 'Modelagem Computacional', icon: <ComputerIcon /> },
+      { 
+        id: 'Modelagem Computacional', 
+        icon: <ComputerIcon />,
+        route:'modelagemComputacional'
+      },
        {/*{ id: 'Cardiologia', icon: <FavoriteBorderIcon /> },*/}
       /*{ id: 'Hosting', icon: <PublicIcon /> },
       { id: 'Functions', icon: <SettingsEthernetIcon /> },
@@ -52,9 +55,21 @@ const categories = [
   {
     id: 'Grupos de Pesquisas',
     children: [
-      { id: 'LEMAS/IMS', icon: <MedicationIcon /> },
-      { id: 'LNCC', icon: <SchoolIcon /> },
-      { id: 'FAETERJ', icon: <SchoolIcon /> },
+      { 
+        id: 'LEMAS/IMS', 
+        icon: <MedicationIcon/>,
+        route: 'ims' 
+       },
+      { 
+        id: 'LNCC', 
+        icon: <SchoolIcon />,
+        route:'lncc'
+       },
+      { 
+        id: 'FAETERJ', 
+        icon: <SchoolIcon />,
+        route:'faeterj'
+       },
       
     ],
   },
@@ -78,19 +93,19 @@ const itemCategory = {
 
 export default function Navigator(props: DrawerProps) {
   const { ...other } = props;
-  const [content, setContent] = useState('');
   const [activeItem, setActiveItem] = useState('Apresentacao');
-
+  const router = useRouter();
   
-  const handleItemClick = (teste: string) => {
-    other.PaperProps.teste2(teste);
-    setActiveItem(teste);
+  const handleItemClick = (route: string, active: string) => {
+    
+    router.push(route);
+    setActiveItem(active);
   };
   
   return (
     <Drawer variant="permanent" {...other}>
       <List disablePadding>
-      <ListItemButton  selected={activeItem === 'Apresentacao'}  onClick={() => handleItemClick('Apresentacao')}>
+      <ListItemButton onClick={() => router.push('/') }>
         <ListItem sx={{ ...item, ...itemCategory, fontSize: 18, color: '#fff', height:'100px' }}>
         <Typography color="inherit" variant="h5" component="h1">
                 Cooperação Científica 
@@ -98,18 +113,15 @@ export default function Navigator(props: DrawerProps) {
         </ListItem>
         </ListItemButton>
        
-        
-     
-    
         {categories.map(({ id, children }) => (
           <Box key={id} sx={{ bgcolor: '#101F33'}}>
             <ListItem sx={{ py: 2, px: 3 }}>
               <ListItemText   sx={{ fontWeight: 'bold', color: '#ff0000', '& span': { fontWeight: 'bold' } }}>{id}</ListItemText>
             </ListItem>
-            {children.map(({ id: childId, icon }) => (
+            {children.map(({ id: childId, icon, route }) => (
               <ListItem disablePadding key={childId}>
               
-              <ListItemButton selected={activeItem === childId} sx={item} onClick={() => handleItemClick(childId)}>
+              <ListItemButton selected={activeItem === childId} sx={item} onClick={() => handleItemClick(route, childId)}>
                   <ListItemIcon>{icon}</ListItemIcon>
                   <ListItemText >{childId}</ListItemText>
                 </ListItemButton>
