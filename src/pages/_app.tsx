@@ -156,7 +156,7 @@ export default function App({ Component, pageProps}: AppProps) {
   return (
     <ThemeProvider theme={theme}>
    
-    <Box sx={{ display: 'flex', minHeight: '100vh' }}>
+    <Box sx={{ display: 'flex', minHeight: '90vh' }}>
         <CssBaseline />
         <Box
           component="nav"
@@ -176,9 +176,7 @@ export default function App({ Component, pageProps}: AppProps) {
             <Component {...pageProps} />
           </div>
           </Box>
-          <Box component="footer" sx={{ p: 2, bgcolor: '#eaeff1' }}>
-            <Copyright />
-          </Box>
+         
         </Box>
       </Box>
       

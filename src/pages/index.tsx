@@ -1,5 +1,6 @@
+import Copyright from "@/components/copyright";
 import Navigator from "@/components/navigator";
-import Paperbase from "@/components/paperBase";
+import Box from "@mui/material/Box";
 //import Image from "next/image";
 //import { Inter } from "next/font/google";
 
@@ -9,8 +10,14 @@ import Paperbase from "@/components/paperBase";
 
 export default function Home() {
   return (
-    <>
+    <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          minHeight: '85vh',
+        }}>
     <h1>Home</h1>
-    </>
+  
+          </div>
   );
 }
