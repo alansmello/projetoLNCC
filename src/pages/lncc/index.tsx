@@ -1,3 +1,5 @@
+import Copyright from "@/components/copyright";
+import Box from "@mui/material/Box";
 
 
 
@@ -12,6 +14,7 @@ export default function Lncc() {
         }}>
        
        <h1>LNCC</h1>
+        
       </div>
     );
 }
