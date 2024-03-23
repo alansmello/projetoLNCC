@@ -1,7 +1,4 @@
-
-
-
-export default function Cancer() {
+export default function TotalGastoPorAno() {
   
     return (
       <div
@@ -10,8 +7,10 @@ export default function Cancer() {
           flexDirection: 'column',
           minHeight: '85vh',
         }}>
+          
+           <h1>Gráfico do Total de Gastos por Ano</h1>
+                  
        
-       <h1>Câncer</h1>
       </div>
     );
 }

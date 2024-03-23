@@ -33,9 +33,9 @@ const categories = [
     id: 'Linhas de Pesquisas',
     children: [
       {
-        id: 'Câncer' ,
+        id: 'Oncologia' ,
         icon: <LocalHospitalIcon />,
-        route: 'cancer'
+        route: 'oncologia'
       },
       { 
         id: 'Modelagem Computacional', 
@@ -98,7 +98,7 @@ export default function Navigator(props: DrawerProps) {
   
   const handleItemClick = (route: string, active: string) => {
     
-    router.push(route);
+    router.push(`/${route}`);
     setActiveItem(active);
   };
   

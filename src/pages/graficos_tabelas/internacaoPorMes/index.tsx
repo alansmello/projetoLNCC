@@ -1,9 +1,4 @@
-import Copyright from "@/components/copyright";
-import Box from "@mui/material/Box";
-
-
-
-export default function Lncc() {
+export default function InternacaoPorMes() {
   
     return (
       <div
@@ -12,9 +7,10 @@ export default function Lncc() {
           flexDirection: 'column',
           minHeight: '85vh',
         }}>
+          
+           <h1>Gráfico de Internações por Mês</h1>
+                  
        
-       <h1>GRUPO DE PESQUISA LNCC</h1>
-        
       </div>
     );
 }

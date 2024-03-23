@@ -1,9 +1,4 @@
-import Copyright from "@/components/copyright";
-import Box from "@mui/material/Box";
-
-
-
-export default function Lncc() {
+export default function TotalGastoAIHEtnias() {
   
     return (
       <div
@@ -12,9 +7,10 @@ export default function Lncc() {
           flexDirection: 'column',
           minHeight: '85vh',
         }}>
+          
+           <h1>Gráfico do Total de gastos com contagem de AIH por Etnias</h1>
+                  
        
-       <h1>GRUPO DE PESQUISA LNCC</h1>
-        
       </div>
     );
 }
