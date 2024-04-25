@@ -96,7 +96,7 @@ export default function Navigator(props: DrawerProps) {
   const [activeItem, setActiveItem] = useState('Apresentacao');
   const router = useRouter();
   
-  const handleItemClick = (route: string, active: string) => {
+  const handleItemClick = (route: string | undefined, active: string) => {
     
     router.push(`/${route}`);
     setActiveItem(active);
@@ -121,7 +121,7 @@ export default function Navigator(props: DrawerProps) {
             {children.map(({ id: childId, icon, route }) => (
               <ListItem disablePadding key={childId}>
               
-              <ListItemButton selected={activeItem === childId} sx={item} onClick={() => handleItemClick(route, childId)}>
+              <ListItemButton selected={activeItem === childId} sx={item} onClick={() => handleItemClick(route, activeItem)}>
                   <ListItemIcon>{icon}</ListItemIcon>
                   <ListItemText >{childId}</ListItemText>
                 </ListItemButton>
