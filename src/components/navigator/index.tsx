@@ -7,6 +7,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import TabIcon from '@mui/icons-material/Tab';
 import HomeIcon from '@mui/icons-material/Home';
 import PeopleIcon from '@mui/icons-material/People';
 import DnsRoundedIcon from '@mui/icons-material/DnsRounded';
@@ -70,6 +71,18 @@ const categories = [
         icon: <SchoolIcon />,
         route:'faeterj'
        },
+      
+    ],
+  },
+  {
+    id: 'Documentações',
+    children: [
+      { 
+        id: 'Calculo IPCA', 
+        icon: <TabIcon/>,
+        route: 'ipca' 
+       },
+     
       
     ],
   },
