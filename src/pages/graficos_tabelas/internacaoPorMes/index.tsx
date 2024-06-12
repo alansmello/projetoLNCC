@@ -1,16 +1,21 @@
 export default function InternacaoPorMes() {
   
-    return (
-      <div
+  return (
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        minHeight: '85vh',
+      }}>
+   
+      <iframe
+        src="/documentosPDF/2-quantidade-de-registro-de-internacao-por-mes.pdf"
         style={{
-          display: 'flex',
-          flexDirection: 'column',
-          minHeight: '85vh',
-        }}>
-          
-           <h1>Gráfico de Internações por Mês</h1>
-                  
-       
-      </div>
-    );
+          width: '100%',
+          height: 'calc(85vh - 50px)', // Ajuste a altura conforme necessário
+          border: 'none',
+        }}
+      ></iframe>
+    </div>
+  );
 }

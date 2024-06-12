@@ -8,9 +8,9 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import TabIcon from '@mui/icons-material/Tab';
+import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';import PeopleIcon from '@mui/icons-material/People';
 import HomeIcon from '@mui/icons-material/Home';
-import PeopleIcon from '@mui/icons-material/People';
-import DnsRoundedIcon from '@mui/icons-material/DnsRounded';
+import GroupsIcon from '@mui/icons-material/Groups';import DnsRoundedIcon from '@mui/icons-material/DnsRounded';
 import PermMediaOutlinedIcon from '@mui/icons-material/PhotoSizeSelectActual';
 import PublicIcon from '@mui/icons-material/Public';
 import SettingsEthernetIcon from '@mui/icons-material/SettingsEthernet';
@@ -83,6 +83,22 @@ const categories = [
         route: 'ipca' 
        },
      
+      
+    ],
+  },
+  {
+    id: 'Contato e Equipe',
+    children: [
+      { 
+        id: 'Contatos', 
+        icon: <PermContactCalendarIcon/>,
+        route: 'contatos' 
+       },
+       { 
+        id: 'Equipe de Desenvolvimento do Site', 
+        icon: <GroupsIcon/>,
+        route: 'equipeDesenvolvimento' 
+       },
       
     ],
   },
