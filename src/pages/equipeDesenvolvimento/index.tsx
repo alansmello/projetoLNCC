@@ -6,9 +6,17 @@ export default function EquipeDesenvolvimento() {
           display: 'flex',
           flexDirection: 'column',
           minHeight: '85vh',
+          padding: '20px'
         }}>
        
        <h1 style={{ textAlign: 'center', marginBottom: '20px',  fontWeight: 'bold', fontSize: '1.3em' }}>Equipe Desenvolvimento</h1>
+
+       <hr style={{  width: '100%', marginBottom: '20px', borderColor: 'black', borderWidth: '0.5px' }} />
+
+       <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+        <p style={{ margin: '0', fontWeight: 'bold' }}>Orientador: Dr. Paulo Cabral Filho</p>
+       </div>
+
        <table style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>
           <tr>
@@ -30,6 +38,7 @@ export default function EquipeDesenvolvimento() {
           </tr>
         </tbody>
       </table>
+     
 
       </div>
     );
