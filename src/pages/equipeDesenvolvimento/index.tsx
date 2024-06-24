@@ -14,8 +14,11 @@ export default function EquipeDesenvolvimento() {
        <hr style={{  width: '100%', marginBottom: '20px', borderColor: 'black', borderWidth: '0.5px' }} />
 
        <div style={{ textAlign: 'center', marginBottom: '20px' }}>
-        <p style={{ margin: '0', fontWeight: 'bold' }}>Orientador: Dr. Paulo Cabral Filho</p>
+        <p style={{ margin: '0', fontWeight: 'bold' }}>Orientadores:</p>
+        <p style={{ margin: '0' }}>Dr. Paulo Cabral Filho </p>
+        <p style={{ margin: '0' }}>Dr. José Karam Filho </p>
        </div>
+
 
        <table style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>
