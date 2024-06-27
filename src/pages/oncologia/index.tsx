@@ -25,7 +25,7 @@ export default function Oncologia() {
       <Link href={"/graficos_tabelas/internacaoPorAno"} style={{fontWeight: 'bold', fontStyle: 'italic'}}>1 – Quantidade de registros de internações por ano</Link>
       <Link href={"/graficos_tabelas/internacaoPorMes"} style={{fontWeight: 'bold', fontStyle: 'italic'}}>2 – Quantidade de registros de internações por mês</Link>
       <Link href={"/graficos_tabelas/registrosPorEstados"} style={{fontWeight: 'bold', fontStyle: 'italic'}}>3 – Quantidade de registros por estados</Link>
-      <Link href={"/graficos_tabelas/totalGastoPorAno"} style={{fontWeight: 'bold', fontStyle: 'italic'}}>4 – Total de gastos por ano</Link>
+      <Link href={"/graficos_tabelas/totalGastoPorAno"} style={{fontWeight: 'bold', fontStyle: 'italic'}}>4 - Totais de gastos por ano e médias das AIHs por ano, corrigidos pelos índices ipca geral e de saúde</Link>
       <Link href={"/graficos_tabelas/totalGastoPorEstado"} style={{fontWeight: 'bold', fontStyle: 'italic'}}>5 – Total de gastos por estados da federação</Link>
       <Link href={"/graficos_tabelas/totalGastoPorRegiao"} style={{fontWeight: 'bold', fontStyle: 'italic'}}>6 – Total de gastos por região</Link>
       <Link href={"/graficos_tabelas/totalGastoPorQuantTipoUnidGestora"} style={{fontWeight: 'bold', fontStyle: 'italic'}}>7 – Total de gastos de internações, por quantidade de tipo de unidade gestora</Link>
