@@ -99,11 +99,11 @@ export default function Header() {
   </Grid>
   
   {/* Terceira imagem alinhada à direita */}
-  <Grid item>
+  {/* <Grid item>
     <Link href="https://www.faeterj-petropolis.edu.br/" target="_blank" rel="noopener noreferrer">
       <Image src="/images/faeterj4.png" alt="Faeterj Logo" width={100} height={100} />
     </Link>
-  </Grid>
+  </Grid> */}
 </Grid>
 
         </Toolbar>

@@ -21,6 +21,7 @@ import PhonelinkSetupIcon from '@mui/icons-material/PhonelinkSetup';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ComputerIcon from '@mui/icons-material/Computer';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import SchoolIcon from '@mui/icons-material/School';
 import MedicationIcon from '@mui/icons-material/Medication';
 import Link from 'next/link';
@@ -39,10 +40,15 @@ const categories = [
         route: 'oncologia'
       },
       { 
-        id: 'Modelagem Computacional', 
-        icon: <ComputerIcon />,
-        route:'modelagemComputacional'
-      },
+        id: 'Cardiologia', 
+        icon: <FavoriteIcon />,         
+        route:'cardiologia'
+         },
+      // { 
+      //   id: 'Modelagem Computacional', 
+      //   icon: <ComputerIcon />,
+      //   route:'modelagemComputacional'
+      // },
        {/*{ id: 'Cardiologia', icon: <FavoriteBorderIcon /> },*/}
       /*{ id: 'Hosting', icon: <PublicIcon /> },
       { id: 'Functions', icon: <SettingsEthernetIcon /> },
@@ -66,28 +72,33 @@ const categories = [
         icon: <SchoolIcon />,
         route:'lncc'
        },
-      { 
+       { 
+        id: 'Campos de Pesquisa', 
+        icon: <SchoolIcon />,
+        route:'camposPesquisa'
+       }
+      /*{ 
         id: 'FAETERJ', 
         icon: <SchoolIcon />,
         route:'faeterj'
-       },
+       },*/
       
     ],
   },
   {
-    id: 'Documentações',
+    id: '',
     children: [
       { 
-        id: 'Calculo IPCA', 
+        id: 'Documentações', 
         icon: <TabIcon/>,
-        route: 'ipca' 
+        route: 'documentacoes' 
        },
      
       
     ],
   },
   {
-    id: 'Contato e Equipe',
+    id: '',
     children: [
       { 
         id: 'Contatos', 
@@ -151,8 +162,19 @@ export default function Navigator(props: DrawerProps) {
               <ListItem disablePadding key={childId}>
               
               <ListItemButton selected={activeItem === childId} sx={item} onClick={() => handleItemClick(route, activeItem)}>
-                  <ListItemIcon>{icon}</ListItemIcon>
-                  <ListItemText >{childId}</ListItemText>
+              <ListItemIcon
+                    sx={{
+                      color: childId === 'Contatos' || childId === 'Equipe de Desenvolvimento do Site' ? '#ff0000' : 'inherit',
+                    }}
+                  >
+                    {icon}
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={childId}
+                    sx={{
+                      color: childId === 'Contatos' || childId === 'Equipe de Desenvolvimento do Site' ? '#ff0000' : 'inherit',
+                    }}
+                  />
                 </ListItemButton>
               
               </ListItem>
