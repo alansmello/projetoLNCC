@@ -93,17 +93,17 @@ export default function Header() {
   
   {/* Segunda imagem alinhada ao centro */}
   <Grid item>
-    <Link href="https://www.ims.uerj.br/" target="_blank" rel="noopener noreferrer">
-      <Image src="/images/ims4.png" alt="OMS Logo" width={300} height={300} />
+    <Link href="https://dgp.cnpq.br/dgp/espelhogrupo/4623" target="_blank" rel="noopener noreferrer">
+      <Image src="/images/lemas.png" alt="OMS Logo" width={300} height={300} />
     </Link>
   </Grid>
   
   {/* Terceira imagem alinhada à direita */}
-  {/* <Grid item>
-    <Link href="https://www.faeterj-petropolis.edu.br/" target="_blank" rel="noopener noreferrer">
-      <Image src="/images/faeterj4.png" alt="Faeterj Logo" width={100} height={100} />
+  <Grid item>
+    <Link href="https://www.ims.uerj.br/" target="_blank" rel="noopener noreferrer">
+      <Image src="/images/ims4.png" alt="OMS Logo" width={300} height={300} />
     </Link>
-  </Grid> */}
+  </Grid>
 </Grid>
 
         </Toolbar>

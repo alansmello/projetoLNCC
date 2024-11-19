@@ -9,7 +9,7 @@ export default function EquipeDesenvolvimento() {
           padding: '20px'
         }}>
        
-       <h1 style={{ textAlign: 'center', marginBottom: '20px',  fontWeight: 'bold', fontSize: '1.3em' }}>Equipe Desenvolvimento</h1>
+       <h1 style={{ textAlign: 'center', marginBottom: '20px',  fontWeight: 'bold', fontSize: '1.3em' }}>Equipe de Desenvolvimento</h1>
 
        <hr style={{  width: '100%', marginBottom: '20px', borderColor: 'black', borderWidth: '0.5px' }} />
 

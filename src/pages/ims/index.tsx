@@ -12,8 +12,12 @@ export default function Ims() {
           minHeight: '85vh',
         }}>
           
-            <Link href="https://dgp.cnpq.br/dgp/espelhogrupo/4623" target="_blank" rel="noopener noreferrer">
-              <Image src="/images/lemas.jpg" alt="OMS Logo" width={300} height={300} />
+            <Link 
+              href="https://dgp.cnpq.br/dgp/espelhogrupo/4623" 
+              target="_blank" rel="noopener noreferrer"
+              style={{ textDecoration: 'none', color: 'black' }}
+              >
+              <h1 style={{  fontWeight: 'normal' }}>LEMAS/IMS</h1>
             </Link>
        
       </div>

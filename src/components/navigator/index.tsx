@@ -19,6 +19,7 @@ import TimerIcon from '@mui/icons-material/Timer';
 import SettingsIcon from '@mui/icons-material/Settings';
 import PhonelinkSetupIcon from '@mui/icons-material/PhonelinkSetup';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
+import TableViewIcon from '@mui/icons-material/TableView';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ComputerIcon from '@mui/icons-material/Computer';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -32,7 +33,7 @@ import { useRouter } from 'next/router';
 
 const categories = [
   {
-    id: 'Linhas de Pesquisas',
+    id: 'Estatísticas',
     children: [
       {
         id: 'Oncologia' ,
@@ -44,6 +45,11 @@ const categories = [
         icon: <FavoriteIcon />,         
         route:'cardiologia'
          },
+         { 
+          id: 'Campos Utilizados', 
+          icon: <TableViewIcon />,         
+          route:'camposUtilizados'
+           },
       // { 
       //   id: 'Modelagem Computacional', 
       //   icon: <ComputerIcon />,
@@ -71,12 +77,12 @@ const categories = [
         id: 'LNCC', 
         icon: <SchoolIcon />,
         route:'lncc'
-       },
+       }/*,
        { 
         id: 'Campos de Pesquisa', 
         icon: <SchoolIcon />,
         route:'camposPesquisa'
-       }
+       }*/
       /*{ 
         id: 'FAETERJ', 
         icon: <SchoolIcon />,
