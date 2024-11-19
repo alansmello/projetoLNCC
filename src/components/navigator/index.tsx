@@ -71,7 +71,7 @@ const categories = [
       { 
         id: 'LEMAS/IMS', 
         icon: <MedicationIcon/>,
-        route: 'ims' 
+        route: 'https://dgp.cnpq.br/dgp/espelhogrupo/4623' 
        },
       { 
         id: 'LNCC', 
@@ -143,9 +143,16 @@ export default function Navigator(props: DrawerProps) {
   const router = useRouter();
   
   const handleItemClick = (route: string | undefined, active: string) => {
-    
-    router.push(`/${route}`);
-    setActiveItem(active);
+    if (route) {
+      if (route.startsWith('http')) {
+        // Redireciona para sites externos
+        window.open(route, '_blank');
+      } else {
+        // Redireciona para rotas internas
+        router.push(`/${route}`);
+      }
+      setActiveItem(active);
+    }
   };
   
   return (
