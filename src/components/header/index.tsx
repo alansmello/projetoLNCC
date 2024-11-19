@@ -101,7 +101,7 @@ export default function Header() {
   {/* Terceira imagem alinhada à direita */}
   <Grid item>
     <Link href="https://dgp.cnpq.br/dgp/espelhogrupo/4623" target="_blank" rel="noopener noreferrer">
-      <Image src="/images/lemas.JPG" alt="OMS Logo" width={300} height={300} />
+      <Image src="/images/lemas.jpg" alt="OMS Logo" width={300} height={300} />
     </Link>
   </Grid>
 </Grid>
