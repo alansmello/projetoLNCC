@@ -10,8 +10,9 @@ export default function Cardiologia() {
           flexDirection: 'column',
           minHeight: '85vh',
         }}>
+       <h1 style={{fontWeight: 'bold'}}>CARDIOLOGIA</h1>
+       <br></br>
        
-       <h1>Cardiologia</h1>
        <h1>GRÁFICOS E TABELAS DISPONÍVEIS</h1>
       <br></br>
       <Link href={"/graficos_tabelas/cardiologia/internacoesPorMes"} style={{fontWeight: 'bold', fontStyle: 'italic'}}>1 – Total de internações por Mês</Link>
