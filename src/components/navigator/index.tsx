@@ -33,6 +33,16 @@ import { useRouter } from 'next/router';
 
 const categories = [
   {
+    id: 'MOU',  // Adicionando uma nova seção
+    children: [
+      { 
+        id: 'Minuta de Mou',  
+        icon: <TabIcon />,  // Ícone do MUI (pode trocar por outro)
+        route: 'mou'  // Rota para o componente criado
+      },
+    ],
+  },
+  {
     id: 'Estatísticas',
     children: [
       {
@@ -91,7 +101,7 @@ const categories = [
       
     ],
   },
-  {
+  /*{
     id: '',
     children: [
       { 
@@ -101,6 +111,16 @@ const categories = [
        },
      
       
+    ],
+  },*/
+  {
+    id: 'Documentações',  // Adicionando uma nova seção
+    children: [
+      { 
+        id: 'Cálculo IPCA',  
+        icon: <TabIcon />,  // Ícone do MUI (pode trocar por outro)
+        route: 'ipca'  // Rota para o componente criado
+      },
     ],
   },
   {
