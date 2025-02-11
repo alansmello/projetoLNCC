@@ -36,7 +36,7 @@ const categories = [
     id: 'MOU',  // Adicionando uma nova seção
     children: [
       { 
-        id: 'Minuta de Mou',  
+        id: 'Memorando de Entendimento',  
         icon: <TabIcon />,  // Ícone do MUI (pode trocar por outro)
         route: 'mou'  // Rota para o componente criado
       },
