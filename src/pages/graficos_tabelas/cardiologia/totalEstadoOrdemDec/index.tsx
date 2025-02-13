@@ -10,7 +10,7 @@ export default function TotalEstadoOrdemDec() {
         }}>
      
         <iframe
-          src="/documentosPDF/cardiologia-totalRegistrosPorEstadosOrdemDecrescente.pdf"
+          src="/documentosPDF/POR_REGIAO_DECR.pdf"
           style={{
             width: '100%',
             height: 'calc(85vh - 50px)', // Ajuste a altura conforme necessário

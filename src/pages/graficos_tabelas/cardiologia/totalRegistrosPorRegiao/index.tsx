@@ -10,7 +10,7 @@ export default function TotalRegistrosPorRegiao() {
         }}>
      
         <iframe
-          src="/documentosPDF/cardiologia-totalRegisatrosRegiao.pdf"
+          src="/documentosPDF/POR_REGIAO.pdf"
           style={{
             width: '100%',
             height: 'calc(85vh - 50px)', // Ajuste a altura conforme necessário

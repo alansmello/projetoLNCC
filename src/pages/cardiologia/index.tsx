@@ -21,7 +21,7 @@ export default function Cardiologia() {
  
       <Link href={"/graficos_tabelas/cardiologia/totalRegistrosPorEstado"} style={{fontWeight: 'bold', fontStyle: 'italic'}}>4 - Total de Registros por Estado</Link>
       <Link href={"/graficos_tabelas/cardiologia/totalEstadoOrdemDec"} style={{fontWeight: 'bold', fontStyle: 'italic'}}>5 – Total de Registros por Estado em Ordem Decrescente</Link>
-      <Link href={"/graficos_tabelas/cardiologia/totalEstadoOrdemCresc"} style={{fontWeight: 'bold', fontStyle: 'italic'}}>6 – Total de Registros por Estado em Ordem Crescente</Link>
+      <Link href={"/graficos_tabelas/cardiologia/totalEstadoOrdemCresc"} style={{fontWeight: 'bold', fontStyle: 'italic'}}>6 – Total de Registros por Região em Ordem Decrescente</Link>
       </div>
     );
 }

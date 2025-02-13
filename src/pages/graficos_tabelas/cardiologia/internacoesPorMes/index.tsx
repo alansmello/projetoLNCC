@@ -10,7 +10,7 @@ export default function InternacaoPorMes() {
         }}>
      
         <iframe
-          src="/documentosPDF/cardiologia-internacoesPorMes.pdf"
+          src="/documentosPDF/POR_MES.pdf"
           style={{
             width: '100%',
             height: 'calc(85vh - 50px)', // Ajuste a altura conforme necessário
