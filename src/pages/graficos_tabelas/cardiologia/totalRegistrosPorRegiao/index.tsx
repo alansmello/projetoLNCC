@@ -10,7 +10,7 @@ export default function TotalRegistrosPorRegiao() {
         }}>
      
         <iframe
-          src="/documentosPDF/POR_REGIAO.pdf"
+          src="/documentosPDF/RegistrosPorRegiao.pdf"
           style={{
             width: '100%',
             height: 'calc(85vh - 50px)', // Ajuste a altura conforme necessário
